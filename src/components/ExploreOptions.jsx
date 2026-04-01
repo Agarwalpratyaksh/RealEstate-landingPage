@@ -75,7 +75,6 @@ export default function ExploreOptions() {
           ))}
         </div>
 
-        {/* Arrow navigators */}
         <div className="absolute right-0 top-1/2 -mt-5 md:-right-4 w-10 h-10 bg-white border border-gray-100 rounded-full shadow-md flex items-center justify-center cursor-pointer hover:bg-gray-50 z-10 opacity-90 hover:opacity-100">
           <ChevronRight className="w-5 h-5 text-gray-600" />
         </div>

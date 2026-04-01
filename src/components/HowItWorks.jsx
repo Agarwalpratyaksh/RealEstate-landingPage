@@ -98,7 +98,6 @@ export default function HowItWorks() {
                   />
                 </div>
 
-                {/* Step Text */}
                 <div>
                   <h4 className="text-lg font-bold text-gray-900 mb-2">
                     {step.title}

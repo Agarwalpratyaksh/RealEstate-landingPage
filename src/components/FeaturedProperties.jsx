@@ -176,7 +176,6 @@ export default function FeaturedProperties() {
         ))}
       </div>
 
-      {/* Footer Action */}
       <div className="text-center mt-12">
         <button className="bg-orange-100 hover:bg-orange-200 text-orange-600 font-bold px-8 py-3 rounded-full text-sm inline-flex items-center gap-2 transition-colors cursor-pointer">
           See All Listing <span>→</span>
