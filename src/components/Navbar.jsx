@@ -30,12 +30,12 @@ export default function Navbar() {
               Gaj
             </span>
           </span>
-          <div
+          {/* <div
             className={`hidden md:flex items-center gap-1 text-sm font-semibold px-3 py-1.5 rounded-full transition-colors cursor-pointer ${scrolled ? "hover:bg-slate-100" : "hover:bg-white/10"}`}
           >
-            <span className="opacity-90">All India</span>
+            <span className="opacity-90">Browse</span>
             <ChevronDown className="w-4 h-4 opacity-70" />
-          </div>
+          </div> */}
         </div>
 
         {/* Right side */}

@@ -4,23 +4,23 @@ export default function HowItWorks() {
   const steps = [
     {
       id: 1,
-      title: "Find Real Estate",
+      title: "Find Your Dream Home",
       description:
-        "Sumo petentium ut per, at his wisim utinam adipiscing. Est ei graeco",
+        "Browse our extensive collection of premium properties and find the perfect space that fits your lifestyle.",
       icon: Home,
     },
     {
       id: 2,
-      title: "Meet Realtor",
+      title: "Connect with Experts",
       description:
-        "Sumo petentium ut per, at his wisim utinam adipiscing. Est ei graeco",
+        "Our professional realtors are here to guide you through every step of the buying or renting process.",
       icon: Users,
     },
     {
       id: 3,
-      title: "Take The Keys",
+      title: "Secure Your Key",
       description:
-        "Sumo petentium ut per, at his wisim utinam adipiscing. Est ei graeco",
+        "Complete the paperwork with ease and get ready to step into your brand new home or commercial space.",
       icon: Key,
     },
   ];
@@ -64,10 +64,10 @@ export default function HowItWorks() {
             </div>
             <div>
               <p className="text-gray-500 text-[11px] font-semibold mb-0.5">
-                Properties For Sel
+                Properties For Sale
               </p>
               <p className="text-gray-900 font-bold text-2xl leading-none">
-                14K
+                14K+
               </p>
             </div>
           </div>
@@ -82,8 +82,9 @@ export default function HowItWorks() {
           </h2>
 
           <p className="text-gray-600 text-[15px] mb-12 max-w-[90%] leading-relaxed">
-            Pellentesque egestas elementum egestas faucibus sem. Velit nunc
-            egestas ut morbi. Leo diam diam.
+            We simplify the process of finding your ideal property by providing
+            expert guidance, verified listings, and a seamless closing
+            experience.
           </p>
 
           <div className="flex flex-col gap-10">

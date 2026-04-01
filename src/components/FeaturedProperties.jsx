@@ -1,7 +1,10 @@
 // src/components/FeaturedProperties.jsx
+import { useState } from "react";
 import { MapPin, BedDouble, Bath, Maximize } from "lucide-react";
 
 export default function FeaturedProperties() {
+  const [filter, setFilter] = useState("all");
+
   const properties = [
     {
       id: 1,
@@ -85,6 +88,13 @@ export default function FeaturedProperties() {
     },
   ];
 
+  const filteredProperties = properties.filter((property) => {
+    if (filter === "all") return true;
+    if (filter === "sale") return property.status === "FOR SALE";
+    if (filter === "rent") return property.status === "FOR RENT";
+    return true;
+  });
+
   return (
     <section className="py-16 px-8 max-w-[1200px] mx-auto">
       {/* Header */}
@@ -93,18 +103,40 @@ export default function FeaturedProperties() {
           Featured Properties
         </h2>
         <p className="text-sm text-gray-500 max-w-xl mx-auto mb-8">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Explore our handpicked selection of premium properties across the most
+          sought-after locations.
         </p>
 
         {/* Filters */}
         <div className="flex flex-wrap items-center justify-center gap-4 text-sm font-semibold">
-          <button className="px-5 py-2 rounded-full border border-gray-300 text-gray-900 shadow-sm cursor-pointer hover:bg-gray-50">
+          <button
+            onClick={() => setFilter("all")}
+            className={`px-5 py-2 rounded-full border transition-all cursor-pointer ${
+              filter === "all"
+                ? "bg-orange-500 text-white border-orange-500 shadow-sm"
+                : "border-gray-300 text-gray-500 hover:text-gray-900 hover:bg-gray-50"
+            }`}
+          >
             All Properties
           </button>
-          <button className="px-5 py-2 rounded-full text-gray-500 cursor-pointer hover:text-gray-900">
+          <button
+            onClick={() => setFilter("sale")}
+            className={`px-5 py-2 rounded-full border transition-all cursor-pointer ${
+              filter === "sale"
+                ? "bg-orange-500 text-white border-orange-500 shadow-sm"
+                : "border-transparent text-gray-500 hover:text-gray-900"
+            }`}
+          >
             For Sale
           </button>
-          <button className="px-5 py-2 rounded-full text-gray-500 cursor-pointer hover:text-gray-900">
+          <button
+            onClick={() => setFilter("rent")}
+            className={`px-5 py-2 rounded-full border transition-all cursor-pointer ${
+              filter === "rent"
+                ? "bg-orange-500 text-white border-orange-500 shadow-sm"
+                : "border-transparent text-gray-500 hover:text-gray-900"
+            }`}
+          >
             For Rent
           </button>
         </div>
@@ -112,7 +144,7 @@ export default function FeaturedProperties() {
 
       {/* Property Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {properties.map((property) => (
+        {filteredProperties.map((property) => (
           <div
             key={property.id}
             className="relative rounded-2xl overflow-hidden aspect-[4/3] group cursor-pointer shadow-sm"
