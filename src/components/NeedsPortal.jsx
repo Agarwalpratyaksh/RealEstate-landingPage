@@ -1,127 +1,134 @@
 // src/components/NeedsPortal.jsx
-import { ArrowRight, Home, Key, Building2, Sparkles } from "lucide-react";
+import { ArrowRight, ArrowLeft, Play } from "lucide-react";
 
 export default function NeedsPortal() {
-  const portals = [
-    {
-      id: 1,
-      icon: <Home className="w-4 h-4" />,
-      subtitle: "BUY A HOME",
-      title: "Find, Buy & Own Your Dream Home",
-      desc: "Explore from Apartments, builder floors, villas and more. Discover the perfect space to call your own with our curated selection of premium residential properties.",
-      btnText: "Explore Buying",
-      image:
-        "https://images.unsplash.com/photo-1570129477492-45c003edd2be?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    },
-    {
-      id: 2,
-      icon: <Key className="w-4 h-4" />,
-      subtitle: "RENT A HOME",
-      title: "Rental Homes for Everyone",
-      desc: "Explore from Apartments, builder floors, villas and more. Find fully furnished, semi-furnished, or raw spaces that suit your lifestyle and budget perfectly.",
-      btnText: "Explore Renting",
-      image:
-        "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?ixlib=rb-4.0.3&w=800&h=600&fit=crop",
-    },
-    {
-      id: 3,
-      icon: <Building2 className="w-4 h-4" />,
-      subtitle: "COMMERCIAL",
-      title: "Commercial Spaces for Business",
-      desc: "Explore from Office Spaces, Co-working spaces, Retail Shops and more. Set up your business in prime locations and scale to new heights.",
-      btnText: "Explore Commercial",
-      image:
-        "https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&w=800&h=600&fit=crop",
-    },
-  ];
-
   return (
-    <div className="relative w-full overflow-hidden bg-slate-50 py-24 md:py-32">
-      {/* Background Decorative Elements */}
-      <div className="absolute top-0 left-0 w-full h-[500px] bg-gradient-to-b from-white to-transparent pointer-events-none"></div>
-      <div className="absolute -top-40 -right-40 w-[600px] h-[600px] bg-orange-100 rounded-full blur-[120px] opacity-60 mix-blend-multiply pointer-events-none"></div>
-      <div className="absolute top-[40%] -left-40 w-[500px] h-[500px] bg-blue-50 rounded-full blur-[100px] opacity-60 mix-blend-multiply pointer-events-none"></div>
+    <section className="w-full max-w-[1400px] mx-auto px-6 md:px-12 py-16 md:py-24 bg-white">
+      {/* Top Header Section */}
+      <div className="flex flex-col lg:flex-row items-center justify-between gap-10 mb-12 md:mb-16">
+        <h2 className="text-4xl md:text-[52px] leading-[1.15] font-medium text-black lg:w-[55%] tracking-tight">
+          Your primary home might <br className="hidden lg:block" /> begin to
+          feel left out.
+        </h2>
+      </div>
 
-      <div className="relative w-full max-w-[1300px] mx-auto px-6 md:px-10">
-        <div className="text-center mb-24 relative">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white shadow-sm border border-slate-100 mb-6">
-            <Sparkles className="w-4 h-4 text-orange-400" />
-            <p className="text-xs font-bold text-slate-600 tracking-widest uppercase">
-              All Property Needs - One Portal
-            </p>
+      {/* Middle Content Section */}
+      <div className="flex flex-col lg:flex-row gap-6 mb-12">
+        {/* Left Large Image Block */}
+        <div className="w-full lg:w-[45%] relative rounded-[40px] overflow-hidden aspect-[4/3] lg:aspect-auto min-h-[400px] lg:min-h-[500px]">
+          <img
+            src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070&auto=format&fit=crop"
+            alt="Primary Home"
+            className="w-full h-full object-cover"
+          />
+          {/* Floating Image Widget */}
+          <div className="absolute bottom-6 right-6 bg-white/80 backdrop-blur-md p-2 rounded-full flex items-center gap-2 shadow-lg border border-white/50">
+            <img
+              src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?q=80&w=200&auto=format&fit=crop"
+              alt="Interior 1"
+              className="w-12 h-12 rounded-full object-cover border-2 border-white shadow-sm"
+            />
+            <img
+              src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=200&auto=format&fit=crop"
+              alt="Interior 2"
+              className="w-12 h-12 rounded-full object-cover border-2 border-white shadow-sm"
+            />
+            <img
+              src="https://images.unsplash.com/photo-1600607687644-aac4c15cecb1?q=80&w=200&auto=format&fit=crop"
+              alt="Interior 3"
+              className="w-12 h-12 rounded-full object-cover border-2 border-white shadow-sm"
+            />
           </div>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl leading-[1.15] font-black text-slate-800 mx-auto max-w-3xl capitalize tracking-tight">
-            Find Better Places to{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-600">
-              Live, Work
-            </span>{" "}
-            and Wonder
-          </h2>
         </div>
 
-        <div className="flex flex-col gap-28 md:gap-36">
-          {portals.map((item, index) => (
-            <div
-              key={item.id}
-              className="grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-16 items-center group"
-            >
-              {/* Image Block */}
-              <div
-                className={`relative md:col-span-7 ${
-                  index % 2 !== 0 ? "md:order-2" : "md:order-1"
-                }`}
-              >
-                {/* Decorative background block behind image */}
-                <div
-                  className={`absolute -inset-4 md:-inset-6 rounded-[32px] bg-white shadow-xl shadow-slate-200/50 transition-transform duration-700 group-hover:scale-[1.02] ${
-                    index % 2 !== 0 ? "md:-translate-x-4" : "md:translate-x-4"
-                  } -z-10`}
-                ></div>
+        {/* Right Info Cards */}
+        <div className="w-full lg:w-[55%] flex flex-col gap-6 lg:pl-2">
+          <div className="flex flex-col sm:flex-row gap-6 lg:h-[420px]">
+            {/* Center Info Card */}
+            <div className="w-full sm:w-1/2 bg-orange-100/50 rounded-[40px] p-8 md:p-10 flex flex-col items-center justify-center text-center shadow-[0_2px_10px_rgba(0,0,0,0.02)] border border-orange-50">
+              <h3 className="text-[26px] md:text-[32px] leading-[1.15] font-medium text-black mb-6">
+                Big things can
+                <br />
+                happen in small
+                <br />
+                spaces.
+              </h3>
+              <p className="text-black text-[15px] mb-10 leading-relaxed font-normal px-2">
+                With thoughtful design and smart organization, you can maximize
+                every inch, making room for creativity
+              </p>
+              <button className="px-8 py-3 rounded-full border border-orange-200 text-black text-sm font-medium bg-white hover:bg-orange-50 transition-colors shadow-sm cursor-pointer">
+                Details
+              </button>
+            </div>
 
-                <div className="rounded-[24px] overflow-hidden aspect-[4/3] bg-slate-200 relative">
-                  <div className="absolute inset-0 bg-slate-900/10 z-10 transition-opacity duration-500 group-hover:opacity-0"></div>
-                  <img
-                    src={item.image}
-                    alt={item.title}
-                    className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
-                  />
-                </div>
+            {/* Right Property Card */}
+            <div className="w-full sm:w-1/2 bg-orange-100/50 rounded-[40px] p-4 flex flex-col shadow-[0_2px_10px_rgba(0,0,0,0.02)] border border-orange-50">
+              <div className="w-full rounded-[32px] overflow-hidden mb-6 aspect-[5/4]">
+                <img
+                  src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?q=80&w=2070&auto=format&fit=crop"
+                  alt="Modern House"
+                  className="w-full h-full object-cover"
+                />
               </div>
-
-              {/* Text Block */}
-              <div
-                className={`md:col-span-5 flex flex-col items-start ${
-                  index % 2 !== 0
-                    ? "md:order-1 lg:pr-12"
-                    : "md:order-2 lg:pl-12"
-                }`}
-              >
-                <div className="flex items-center gap-2 px-3 py-1.5 bg-orange-50 border border-orange-100 rounded-lg text-orange-600 mb-6 transition-all duration-300 group-hover:bg-orange-100 group-hover:scale-105 origin-left">
-                  {item.icon}
-                  <p className="text-[11px] font-bold tracking-widest uppercase">
-                    {item.subtitle}
-                  </p>
-                </div>
-
-                <h3 className="text-3xl md:text-4xl lg:text-[42px] font-extrabold text-slate-800 leading-[1.1] mb-6 tracking-tight">
-                  {item.title}
-                </h3>
-
-                <p className="text-slate-500 text-lg leading-relaxed mb-10 border-l-2 border-slate-200 pl-5">
-                  {item.desc}
-                </p>
-
-                <button className="relative overflow-hidden flex items-center justify-between gap-4 bg-orange-400 text-white font-bold py-3.5 pl-8 pr-3 rounded-2xl text-[15px] transition-all duration-300 shadow-[0_8px_20px_rgba(251,146,60,0.3)] hover:shadow-[0_12px_25px_rgba(251,146,60,0.4)] hover:bg-orange-500 transform hover:-translate-y-1">
-                  <span className="relative z-10">{item.btnText}</span>
-                  <div className="relative z-10 w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center backdrop-blur-sm transition-transform duration-300 group-hover:translate-x-1">
-                    <ArrowRight className="w-4 h-4" />
-                  </div>
+              <div className="px-2 flex flex-col items-center text-center pb-2 mt-auto">
+                <h4 className="text-[20px] font-medium text-orange-950 mb-6">
+                  Pricing Start at ₹75 Lakh
+                </h4>
+                <button className="flex items-center gap-2 bg-orange-400/80 text-white px-6 py-4 rounded-full text-[15px] font-medium hover:bg-orange-400 transition-colors w-full justify-center shadow-md cursor-pointer">
+                  Explore Properties <ArrowRight className="w-4 h-4 ml-1" />
                 </button>
               </div>
             </div>
-          ))}
+          </div>
+
+          {/* Slider Text & Arrows */}
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-6 pt-4 lg:pt-6 px-4 mt-auto">
+            <p className="text-black text-[15px] leading-relaxed sm:max-w-[340px]">
+              Whether it's creating a cozy corner for relaxation or transforming
+              a small area into a workspace
+            </p>
+            <div className="flex items-center gap-3 shrink-0">
+              <button className="w-12 h-12 rounded-full border border-orange-200 flex items-center justify-center text-black hover:bg-orange-50 transition-colors cursor-pointer">
+                <ArrowLeft className="w-5 h-5" />
+              </button>
+              <button className="w-12 h-12 rounded-full border border-orange-900 flex items-center justify-center text-orange-900 hover:bg-orange-50 transition-colors cursor-pointer">
+                <ArrowRight className="w-5 h-5" />
+              </button>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+
+      {/* Stats Bottom Section */}
+      <div className="mt-20 md:mt-28 w-full border-t border-orange-100 pt-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12 md:gap-4 divide-y sm:divide-y-0 md:divide-x divide-orange-200">
+          <div className="flex flex-col items-center sm:items-start md:items-center justify-center text-center sm:text-left md:text-center md:pr-4 pt-10 sm:pt-0">
+            <h4 className="text-5xl md:text-[56px] font-medium text-orange-950 mb-3 tracking-tight">
+              100%
+            </h4>
+            <p className="text-black text-[16px]">Satisfactions Clients</p>
+          </div>
+          <div className="flex flex-col items-center sm:items-start md:items-center justify-center text-center sm:text-left md:text-center md:px-4 pt-10 sm:pt-0">
+            <h4 className="text-5xl md:text-[56px] font-medium text-orange-950 mb-3 tracking-tight">
+              500+
+            </h4>
+            <p className="text-black text-[16px]">Property sells</p>
+          </div>
+          <div className="flex flex-col items-center sm:items-start md:items-center justify-center text-center sm:text-left md:text-center md:px-4 pt-10 sm:pt-0">
+            <h4 className="text-5xl md:text-[56px] font-medium text-orange-950 mb-3 tracking-tight">
+              150+
+            </h4>
+            <p className="text-black text-[16px]">Countries & Cities</p>
+          </div>
+          <div className="flex flex-col items-center sm:items-start md:items-center justify-center text-center sm:text-left md:text-center md:pl-4 pt-10 sm:pt-0">
+            <h4 className="text-5xl md:text-[56px] font-medium text-orange-950 mb-3 tracking-tight">
+              2,00+
+            </h4>
+            <p className="text-black text-[16px]">Positive reviews</p>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 }

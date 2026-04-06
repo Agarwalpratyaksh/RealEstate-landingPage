@@ -3,19 +3,20 @@ import Twitter from "../assets/twitter.svg";
 import instagram from "../assets/instagram.svg";
 import linkedin from "../assets/linkedin.svg";
 import mail from "../assets/mail.svg";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
-    <footer className="bg-slate-900 border-t border-slate-800 pt-16 pb-8">
+    <footer className="bg-orange-950 border-t border-orange-900 pt-16 pb-8">
       <div className="max-w-[1200px] mx-auto px-8">
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           {/* Brand & About */}
           <div className="lg:pr-6">
             <h3 className="text-white text-2xl font-extrabold tracking-tight mb-4">
-              101gaj
+              Eastate
             </h3>
-            <p className="text-slate-400 text-sm leading-relaxed mb-6">
+            <p className="text-white/60 text-sm leading-relaxed mb-6">
               Finding your perfect home has never been easier. We provide a
               seamless, transparent, and comprehensive real estate experience
               across India.
@@ -24,25 +25,25 @@ export default function Footer() {
             <div className="flex gap-4">
               <a
                 href="#"
-                className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-300 hover:bg-orange-300 hover:text-white transition-colors"
+                className="w-10 h-10 rounded-full bg-orange-900 flex items-center justify-center text-orange-300 hover:bg-orange-300 hover:text-white transition-colors"
               >
                 <img src={Facebook} className="w-4 h-4" />
               </a>
               <a
                 href="#"
-                className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-300 hover:bg-orange-300 hover:text-white transition-colors"
+                className="w-10 h-10 rounded-full bg-orange-900 flex items-center justify-center text-orange-300 hover:bg-orange-300 hover:text-white transition-colors"
               >
                 <img src={Twitter} className="w-4 h-4" />
               </a>
               <a
                 href="#"
-                className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-300 hover:bg-orange-300 hover:text-white transition-colors"
+                className="w-10 h-10 rounded-full bg-orange-900 flex items-center justify-center text-orange-300 hover:bg-orange-300 hover:text-white transition-colors"
               >
                 <img src={instagram} className="w-4 h-4" />
               </a>
               <a
                 href="#"
-                className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-300 hover:bg-orange-300 hover:text-white transition-colors"
+                className="w-10 h-10 rounded-full bg-orange-900 flex items-center justify-center text-orange-300 hover:bg-orange-300 hover:text-white transition-colors"
               >
                 <img src={linkedin} className="w-4 h-4" />
               </a>
@@ -58,7 +59,7 @@ export default function Footer() {
               <li>
                 <a
                   href="#"
-                  className="text-slate-400 hover:text-white text-sm transition-colors cursor-pointer"
+                  className="text-white/60 hover:text-white text-sm transition-colors cursor-pointer"
                 >
                   Buy a Home
                 </a>
@@ -66,7 +67,7 @@ export default function Footer() {
               <li>
                 <a
                   href="#"
-                  className="text-slate-400 hover:text-white text-sm transition-colors cursor-pointer"
+                  className="text-white/60 hover:text-white text-sm transition-colors cursor-pointer"
                 >
                   Rent a Home
                 </a>
@@ -74,7 +75,7 @@ export default function Footer() {
               <li>
                 <a
                   href="#"
-                  className="text-slate-400 hover:text-white text-sm transition-colors cursor-pointer"
+                  className="text-white/60 hover:text-white text-sm transition-colors cursor-pointer"
                 >
                   Sell Property
                 </a>
@@ -82,7 +83,7 @@ export default function Footer() {
               <li>
                 <a
                   href="#"
-                  className="text-slate-400 hover:text-white text-sm transition-colors cursor-pointer"
+                  className="text-white/60 hover:text-white text-sm transition-colors cursor-pointer"
                 >
                   Commercial Spaces
                 </a>
@@ -90,7 +91,7 @@ export default function Footer() {
               <li>
                 <a
                   href="#"
-                  className="text-slate-400 hover:text-white text-sm transition-colors cursor-pointer"
+                  className="text-white/60 hover:text-white text-sm transition-colors cursor-pointer"
                 >
                   Real Estate Insights
                 </a>
@@ -105,68 +106,55 @@ export default function Footer() {
             </h4>
             <ul className="flex flex-col gap-3">
               <li>
-                <a
-                  href="#"
-                  className="text-slate-400 hover:text-white text-sm transition-colors cursor-pointer"
+                <Link
+                  to="/terms"
+                  className="text-white/60 hover:text-white text-sm transition-colors cursor-pointer"
                 >
                   Terms & Conditions
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#"
-                  className="text-slate-400 hover:text-white text-sm transition-colors cursor-pointer"
+                <Link
+                  to="/privacy"
+                  className="text-white/60 hover:text-white text-sm transition-colors cursor-pointer"
                 >
                   Privacy Policy
-                </a>
+                </Link>
               </li>
+              
               <li>
-                <a
-                  href="#"
-                  className="text-slate-400 hover:text-white text-sm transition-colors cursor-pointer"
+                <Link
+                  to="/refund"
+                  className="text-white/60 hover:text-white text-sm transition-colors cursor-pointer"
                 >
-                  Pricing Guidelines
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-slate-400 hover:text-white text-sm transition-colors cursor-pointer"
-                >
-                  Fraud Alert
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-slate-400 hover:text-white text-sm transition-colors cursor-pointer"
-                >
-                  RERA Guidelines
-                </a>
+                  Refund Policy
+                </Link>
               </li>
             </ul>
           </div>
 
           <div>
-            <h4 className="text-white font-bold mb-6 uppercase text-sm tracking-wider">
-              Contact Us
-            </h4>
+            <Link to="/contact">
+              <h4 className="text-white font-bold mb-6 uppercase text-sm tracking-wider hover:text-orange-300 transition-colors cursor-pointer">
+                Contact Us
+              </h4>
+            </Link>
             <ul className="flex flex-col gap-4">
               <li className="flex items-start gap-3">
-                <span className="text-slate-400 text-sm leading-relaxed">
-                  123 Business Avenue, Sector 62,
+                <span className="text-white/60 text-sm leading-relaxed">
+                  BHA Millenium Tower Sector 62 
                   <br />
-                  Gurugram, Haryana 122002
+                  Noida , 201301
                 </span>
               </li>
               <li className="flex items-center gap-3">
-                <span className="text-slate-400 text-sm">1800-419-9099</span>
+                <span className="text-white/60 text-sm">+91 9168805979</span>
               </li>
               <li className="flex items-center gap-3">
                 <img src={mail} className="w-4 h-4  text-orange-300 shrink-0" />
 
-                <span className="text-slate-400 text-sm">
-                  support@101gaj.com
+                <span className="text-white/60 text-sm">
+                  query@sarvmanglaminvestors.com
                 </span>
               </li>
             </ul>
@@ -174,9 +162,9 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 border-t border-slate-800 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-slate-500 text-sm text-center md:text-left">
-            © {new Date().getFullYear()} 101Gaj . All rights reserved. Not
+        <div className="pt-8 border-t border-orange-900 flex flex-col md:flex-row items-center justify-between gap-4">
+          <p className="text-white text-sm text-center md:text-left">
+            © {new Date().getFullYear()} Eastate . All rights reserved. Not
             officially operated.
           </p>
           <div className="flex gap-4">

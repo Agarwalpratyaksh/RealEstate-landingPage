@@ -13,7 +13,7 @@ export default function Hero() {
           alt="Premium Living"
           className="w-full h-full object-cover object-center"
         />
-        <div className="absolute inset-0 bg-black/40"></div>
+        <div className="absolute inset-0 bg-black/30"></div>
       </div>
 
       <div className="absolute bottom-6 left-0 right-0 z-20 flex justify-center w-full px-4">

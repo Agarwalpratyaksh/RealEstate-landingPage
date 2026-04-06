@@ -33,7 +33,7 @@ export default function HowItWorks() {
           {/* Top Left Image */}
           <div className="absolute top-0 left-0 w-[60%] aspect-[4/3] rounded-3xl overflow-hidden shadow-sm z-0">
             <img
-              src="https://images.unsplash.com/photo-1576941089067-2de3c901e126?w=600&h=450&fit=crop"
+              src="https://images.unsplash.com/photo-1576941089067-2de3c901e126?graytext-black/80&h=450&fit=crop"
               alt="Family outside home"
               className="w-full h-full object-cover"
             />
@@ -42,7 +42,7 @@ export default function HowItWorks() {
           {/* Bottom Left Image */}
           <div className="absolute bottom-[10%] left-0 w-[45%] aspect-square rounded-3xl overflow-hidden shadow-md z-10 hidden sm:block">
             <img
-              src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=500&h=500&fit=crop"
+              src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?black&black&fit=crop"
               alt="Family inside home"
               className="w-full h-full object-cover"
             />
@@ -51,7 +51,7 @@ export default function HowItWorks() {
           {/* Bottom Right Image */}
           <div className="absolute bottom-0 right-0 w-[55%] aspect-[3/4] rounded-3xl overflow-hidden shadow-sm z-0">
             <img
-              src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&h=800&fit=crop"
+              src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?graytext-black/80&h=800&fit=crop"
               alt="Modern architectural home"
               className="w-full h-full object-cover"
             />
@@ -63,10 +63,10 @@ export default function HowItWorks() {
               <Building className="w-6 h-6 text-white" />
             </div>
             <div>
-              <p className="text-gray-500 text-[11px] font-semibold mb-0.5">
+              <p className="text-black/80 text-[11px] font-semibold mb-0.5">
                 Properties For Sale
               </p>
-              <p className="text-gray-900 font-bold text-2xl leading-none">
+              <p className="text-orange-950 font-bold text-2xl leading-none">
                 14K+
               </p>
             </div>
@@ -75,13 +75,13 @@ export default function HowItWorks() {
 
         {/* Right Side: Content & Steps */}
         <div className="flex flex-col">
-          <h2 className="text-[34px] lg:text-[40px] leading-[1.2] mb-5 tracking-tight text-gray-900">
+          <h2 className="text-[34px] lg:text-[40px] leading-[1.2] mb-5 tracking-tight text-orange-950">
             <span className="font-semibold">How It works?</span>
             <br />
             <span className="font-bold">Find a perfect home</span>
           </h2>
 
-          <p className="text-gray-600 text-[15px] mb-12 max-w-[90%] leading-relaxed">
+          <p className="text-black text-[15px] mb-12 max-w-[90%] leading-relaxed">
             We simplify the process of finding your ideal property by providing
             expert guidance, verified listings, and a seamless closing
             experience.
@@ -94,16 +94,16 @@ export default function HowItWorks() {
                 <div className="relative w-[50px] shrink-0 mt-1">
                   <div className="absolute top-1 left-2 w-10 h-10 bg-orange-100 rounded-full transition-transform group-hover:scale-110 duration-300"></div>
                   <step.icon
-                    className="absolute top-0 left-0 w-8 h-8 text-orange-500"
+                    className="absolute top-0 left-0 w-8 h-8 text-black"
                     strokeWidth={1.5}
                   />
                 </div>
 
                 <div>
-                  <h4 className="text-lg font-bold text-gray-900 mb-2">
+                  <h4 className="text-lg font-bold text-orange-950 mb-2">
                     {step.title}
                   </h4>
-                  <p className="text-gray-500 text-[14px] leading-relaxed max-w-[85%]">
+                  <p className="text-black/80 text-[14px] leading-relaxed max-w-[85%]">
                     {step.description}
                   </p>
                 </div>

@@ -4,7 +4,7 @@ export default function CommercialSpaces() {
       <div className="max-w-[1200px] mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
-          <p className="text-[11px] font-bold text-gray-500 tracking-widest uppercase mb-4">
+          <p className="text-[11px] font-bold text-orange-600 tracking-widest uppercase mb-4">
             Commercial Spaces
           </p>
           <h2 className="text-3xl md:text-[38px] leading-tight font-bold text-[#0f172a] max-w-2xl mx-auto">
