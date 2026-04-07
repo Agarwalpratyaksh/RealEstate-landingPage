@@ -19,7 +19,7 @@ export default function FeaturedProperties() {
         "https://assets.cntraveller.in/photos/61c6eb21ac6f6d462792bc2c/master/w_1600%2Cc_limit/La%2520casa%2520maestro.jpg",
       status: "For Sale",
       featured: true,
-      title: "Luxury Family Villa",
+      title: "2BHK Luxury Flat",
       location: " BHA Millenium Tower Noida Sector 62 201309",
       price: "₹1.50 Cr",
       beds: 2,
@@ -29,7 +29,7 @@ export default function FeaturedProperties() {
     {
       id: 2,
       image:
-        "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=2070&auto=format&fit=crop",
+        "https://cimages.elitehavens.com/images/gallery/lowres/P00487/Listing.jpg",
       status: "For Sale",
       featured: false,
       title: "Signature Sky Apartment",
@@ -69,7 +69,7 @@ export default function FeaturedProperties() {
     {
       id: 5,
       image:
-        "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070&auto=format&fit=crop",
+        "https://assamtribune.com/h-upload/2024/11/29/1670650-real-estate-49550871280.webp",
       status: "For Rent",
       featured: true,
       title: "Premium Sea View Flat",

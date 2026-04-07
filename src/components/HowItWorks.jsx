@@ -33,7 +33,7 @@ export default function HowItWorks() {
           {/* Top Left Image */}
           <div className="absolute top-0 left-0 w-[60%] aspect-[4/3] rounded-3xl overflow-hidden shadow-sm z-0">
             <img
-              src="https://images.unsplash.com/photo-1576941089067-2de3c901e126?graytext-black/80&h=450&fit=crop"
+              src="https://themantriblog.wordpress.com/wp-content/uploads/2013/07/mantri-ecr_villa-d_night-c3-no-people-copy.jpg"
               alt="Family outside home"
               className="w-full h-full object-cover"
             />
